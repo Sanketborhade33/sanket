@@ -1,0 +1,4 @@
+{% for borrower in borrowers %}
+    <p>{{ borrower.user.username }} requested ₹{{ borrower.loan_amount }}</p>
+    <a href="{% url 'approve-loan' borrower.id %}" class="bg-green-500 text-white px-4 py-2">Approve</a>
+{% endfor %}

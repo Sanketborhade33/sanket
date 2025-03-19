@@ -1,0 +1,24 @@
+{% comment %} <form method="POST" enctype="multipart/form-data" class="p-8 space-y-6">
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+
+    <button type="submit"
+        class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold py-3 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center">
+        <i class="fas fa-paper-plane mr-2"></i> Submit Loan Request
+    </button>
+</form> {% endcomment %}
+
+
+
+
+<form method="POST" enctype="multipart/form-data" class="p-8 space-y-6">
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+
+    <button type="submit"
+        class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold py-3 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center">
+        <i class="fas fa-paper-plane mr-2"></i> Submit Loan Request
+    </button>
+</form>

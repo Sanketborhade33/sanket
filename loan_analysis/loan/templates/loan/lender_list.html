@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenders List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen p-6 flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl">
+        <h2 class="text-2xl font-bold text-gray-700 mb-4">Registered Lenders</h2>
+        <table class="w-full border-collapse border border-gray-300">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th class="border border-gray-300 p-2">Name</th>
+                    <th class="border border-gray-300 p-2">Email</th>
+                    <th class="border border-gray-300 p-2">Phone</th>
+                    <th class="border border-gray-300 p-2">Loan Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for lender in lenders %}
+                <tr class="text-center bg-gray-50">
+                    <td class="border border-gray-300 p-2">{{ lender.name }}</td>
+                    <td class="border border-gray-300 p-2">{{ lender.email }}</td>
+                    <td class="border border-gray-300 p-2">{{ lender.phone }}</td>
+                    <td class="border border-gray-300 p-2">${{ lender.loan_amount }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4" class="text-center text-gray-500 p-4">No lenders found</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
